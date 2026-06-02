@@ -1,46 +1,69 @@
-![](/public/favicon.ico)
 
-[![Styled With Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
+# Marketplace MVP v1 Platform
 
-DEX MVP V1 is a decentralized exchange that allows anyone to pool, list and trade digital and synthetic assets. Underlying blockchain technology enables anyone to participate in shared market making processes. No need to register, call brokers or present any identity verification whatsoever.
+A fast, scalable crypto Marketplace platform built with **Next.js** and powered by **wagmi** for seamless Web3 integration.
 
+## 🚀 Features
 
-### Install Dependencies
+- Crypto wallet connection with wagmi
+- Token charts and market data
+- Fully responsive and mobile-friendly UI
+- Optimized for performance and scalability
 
-```bash
-1. `npm install`
+## 💻 Tech Stack
 
-```
+- **Framework:** Next.js
+- **Web3 Integration:** wagmi, viem
+- **Styling:** Tailwind CSS
 
-### Run
+## 📦 Getting Started
 
-```bash
-npm start
-```
-
-### Unit testing
-
-```bash
-npm test
-```
-
-### New Features
-
-```Royalties: Creators earn a percentage on resales.
-Wallet Integration: Connects with wallets like Phantom, MetaMask, etc.
-Verified Collections: Authentic project verification.
-Auctions: Bid on NFTs through auctions.
-Filters & Sorting: Advanced search and sorting options.
-Low Fees: Competitive transaction fees.
-Analytics: Insights on sales, trends, and stats.
-Community Engagement: Social features for interaction and sharing.
-```
-
-### Integration test
-
-Normally:
+Clone the repo and install dependencies:
 
 ```bash
-npm build
-npm integration-test
+git clone https://github.com/NovachainTech/Market_MVP_v1.git
+cd Market_MVP_v1
+npm install
 ```
+
+Start the development server:
+
+```bash
+npm start or npm run dev
+```
+
+Open `http://localhost:3000` to view the app.
+
+## 🗂 Project Structure
+
+```
+/components      → Reusable UI components
+/hooks           → Custom React hooks
+/pages           → Next.js pages (routing)
+/public          → Static files and assets
+/styles          → Global and modular styles
+/utils           → Utility functions
+```
+
+## 🔐 Environment Variables
+
+Create a `.env.local` file based on the example below:
+
+```env
+NEXT_PUBLIC_PROJECT_NAME=Market_MVP_v1
+NEXT_PUBLIC_API_URL=https://api.example.com
+```
+
+(Adjust based on your actual configuration)
+
+## 🧪 Testing
+
+```bash
+npm run test
+```
+
+(Use your preferred testing setup: Jest, Vitest, etc.)
+
+## 📄 License
+
+This project is licensed under the MIT License.
