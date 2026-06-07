@@ -16,6 +16,7 @@
     "atemkart": "file:..",
     "axios": "^0.25.0",
     "chart.js": "^3.7.0",
+    "DEX_Nova_MVP": "file:..",
     "notistack": "^2.0.3",
     "react": "^17.0.2",
     "react-chartjs-2": "^4.0.1",

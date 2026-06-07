@@ -1,1 +1,4 @@
-module.exports = { BINANCE_KEY: "PLACE HOLDER KEY, KUCOIN_KEY: "PLACE HOLDER KEY" };
+module.exports = {
+    BINANCE_KEY: "PLACEHOLDER_KEY",
+    KUCOIN_KEY: "PLACEHOLDER_KEY",
+};

@@ -9,23 +9,35 @@ const cloudinary = require('cloudinary');
 // Register User
 exports.registerUser = asyncErrorHandler(async (req, res, next) => {
 
-    const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
-        folder: "avatars",
-        width: 150,
-        crop: "scale",
-    });
-
     const { name, email, gender, password } = req.body;
 
+    let avatar = {
+        public_id: "market_mvp/default_avatar",
+        url: "https://res.cloudinary.com/demo/image/upload/v1312461204/sample.jpg",
+    };
+
+    if (req.body.avatar) {
+        try {
+            const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
+                folder: "avatars",
+                width: 150,
+                crop: "scale",
+            });
+            avatar = {
+                public_id: myCloud.public_id,
+                url: myCloud.secure_url,
+            };
+        } catch (cloudError) {
+            console.warn(`Cloudinary upload skipped: ${cloudError.message}`);
+        }
+    }
+
     const user = await User.create({
-        name, 
+        name,
         email,
         gender,
         password,
-        avatar: {
-            public_id: myCloud.public_id,
-            url: myCloud.secure_url,
-        },
+        avatar,
     });
 
     sendToken(user, 201, res);
